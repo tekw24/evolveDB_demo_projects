@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdde:Database_Schema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdde="http://www.thm.de/mdde" name="classicmodels2" location="MySQL" version="8.0.28">
+  <entites name="customers">
+    <columns xsi:type="mdde:ForeignKey" name="SALESEMPLOYEENUMBER" type="INT" referencedTable="//@entites.1" primaryForeignKey="false" constraintName="customers_ibfk_1" referencedKeyColumn="//@entites.1/@columns.2"/>
+    <columns name="addressLine1" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="addressLine2" size="50" type="VARCHAR"/>
+    <columns name="city" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="contactFirstName" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="contactLastName" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="country" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="creditLimit" size="10.2" type="DECIMAL"/>
+    <columns name="customerName" notNull="true" size="50" type="VARCHAR"/>
+    <columns xsi:type="mdde:PrimaryKey" name="customerNumber" notNull="true" unique="true" type="INT" uniqueConstraintName="PRIMARY" primaryKey="true" referencedBy="//@entites.6/@columns.1 //@entites.7/@columns.2"/>
+    <columns name="phone" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="postalCode" size="15" type="VARCHAR"/>
+    <columns name="state" defaultValue="not set" notNull="true" size="50" type="VARCHAR"/>
+  </entites>
+  <entites name="employees">
+    <columns name="SALARY" size="10.2" type="DECIMAL"/>
+    <columns name="email" notNull="true" size="100" type="VARCHAR"/>
+    <columns xsi:type="mdde:PrimaryKey" name="employeeNumber" notNull="true" unique="true" type="INT" uniqueConstraintName="PRIMARY" primaryKey="true" referencedBy="//@entites.0/@columns.0 //@entites.1/@columns.6 //@entites.2/@columns.0"/>
+    <columns name="firstName" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="jobTitle" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="lastName" notNull="true" size="50" type="VARCHAR"/>
+    <columns xsi:type="mdde:ForeignKey" name="reportsTo" type="INT" referencedTable="//@entites.1" primaryForeignKey="false" constraintName="employees_ibfk_1" referencedKeyColumn="//@entites.1/@columns.2"/>
+  </entites>
+  <entites name="employees_office">
+    <columns xsi:type="mdde:ForeignKey" name="employee_db_id" notNull="true" unique="true" type="INT" uniqueConstraintName="PRIMARY" referencedTable="//@entites.1" primaryForeignKey="true" constraintName="employees_office_ibfk_1" referencedKeyColumn="//@entites.1/@columns.2"/>
+    <columns xsi:type="mdde:ForeignKey" name="office_db_id" notNull="true" unique="true" size="10" type="VARCHAR" uniqueConstraintName="PRIMARY" referencedTable="//@entites.4" primaryForeignKey="true" constraintName="employees_office_ibfk_2" referencedKeyColumn="//@entites.4/@columns.4"/>
+  </entites>
+  <entites name="mdde_history">
+    <columns name="CHANGEDATE" notNull="true" size="0" type="DATETIME"/>
+    <columns name="COLUMN_DB_ID" notNull="true" type="BIGINT"/>
+    <columns name="COLUMN_NAME" notNull="true" size="255" type="VARCHAR"/>
+    <columns xsi:type="mdde:PrimaryKey" name="DB_ID" notNull="true" unique="true" autoIncrement="true" type="BIGINT" uniqueConstraintName="PRIMARY" primaryKey="true"/>
+    <columns name="TABLENAME" notNull="true" size="255" type="VARCHAR"/>
+    <columns name="VALUE" type="BLOB"/>
+  </entites>
+  <entites name="offices">
+    <columns name="addressLine1" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="addressLine2" size="50" type="VARCHAR"/>
+    <columns name="city" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="country" notNull="true" size="50" type="VARCHAR"/>
+    <columns xsi:type="mdde:PrimaryKey" name="officeCode" notNull="true" unique="true" size="10" type="VARCHAR" uniqueConstraintName="PRIMARY" primaryKey="true" referencedBy="//@entites.2/@columns.1"/>
+    <columns name="phone" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="postalCode" notNull="true" size="15" type="VARCHAR"/>
+    <columns name="state" size="50" type="VARCHAR"/>
+    <columns name="territory" notNull="true" size="10" type="VARCHAR"/>
+  </entites>
+  <entites name="orderdetails">
+    <columns name="orderLineNumber" notNull="true" type="SMALLINT"/>
+    <columns xsi:type="mdde:ForeignKey" name="orderNumber" notNull="true" unique="true" type="INT" uniqueConstraintName="PRIMARY" referencedTable="//@entites.6" primaryForeignKey="true" constraintName="orderdetails_ibfk_1" referencedKeyColumn="//@entites.6/@columns.3"/>
+    <columns name="priceEach" notNull="true" size="10.2" type="DECIMAL"/>
+    <columns xsi:type="mdde:ForeignKey" name="productCode" notNull="true" unique="true" size="15" type="VARCHAR" uniqueConstraintName="PRIMARY" referencedTable="//@entites.9" primaryForeignKey="true" constraintName="orderdetails_ibfk_2" referencedKeyColumn="//@entites.9/@columns.2"/>
+    <columns name="quantityOrdered" notNull="true" type="INT"/>
+  </entites>
+  <entites name="orders">
+    <columns name="comments" type="TEXT"/>
+    <columns xsi:type="mdde:ForeignKey" name="customerNumber" notNull="true" unique="true" type="INT" uniqueConstraintName="PRIMARY" referencedTable="//@entites.0" primaryForeignKey="false" constraintName="orders_ibfk_1" referencedKeyColumn="//@entites.0/@columns.9"/>
+    <columns name="orderDate" notNull="true" type="DATE"/>
+    <columns xsi:type="mdde:PrimaryKey" name="orderNumber" notNull="true" unique="true" type="INT" uniqueConstraintName="PRIMARY" primaryKey="true" referencedBy="//@entites.5/@columns.1"/>
+    <columns name="requiredDate" notNull="true" type="DATE"/>
+    <columns name="shippedDate" type="DATE"/>
+    <columns name="status" defaultValue="In Process" notNull="true" size="15" type="VARCHAR"/>
+  </entites>
+  <entites name="payments">
+    <columns name="amount" notNull="true" size="10.2" type="DECIMAL"/>
+    <columns xsi:type="mdde:PrimaryKey" name="checkNumber" notNull="true" unique="true" size="50" type="VARCHAR" uniqueConstraintName="PRIMARY" primaryKey="true"/>
+    <columns xsi:type="mdde:ForeignKey" name="customerNumber" notNull="true" unique="true" type="INT" uniqueConstraintName="PRIMARY" referencedTable="//@entites.0" primaryForeignKey="true" constraintName="payments_ibfk_1" referencedKeyColumn="//@entites.0/@columns.9"/>
+    <columns name="paymentDate" notNull="true" type="DATE"/>
+  </entites>
+  <entites name="productlines">
+    <columns name="htmlDescription" type="MEDIUMTEXT"/>
+    <columns name="image" type="MEDIUMBLOB"/>
+    <columns xsi:type="mdde:PrimaryKey" name="productLine" notNull="true" unique="true" size="50" type="VARCHAR" uniqueConstraintName="PRIMARY" primaryKey="true" referencedBy="//@entites.9/@columns.4"/>
+    <columns name="textDescription" size="4000" type="VARCHAR"/>
+  </entites>
+  <entites name="products">
+    <columns name="MSRP" notNull="true" size="10.2" type="DECIMAL"/>
+    <columns name="buyPrice" notNull="true" size="10.2" type="DECIMAL"/>
+    <columns xsi:type="mdde:PrimaryKey" name="productCode" notNull="true" unique="true" size="15" type="VARCHAR" uniqueConstraintName="PRIMARY" primaryKey="true" referencedBy="//@entites.5/@columns.3"/>
+    <columns name="productDescription" notNull="true" type="TEXT"/>
+    <columns xsi:type="mdde:ForeignKey" name="productLine" notNull="true" unique="true" size="50" type="VARCHAR" uniqueConstraintName="PRIMARY" referencedTable="//@entites.8" primaryForeignKey="false" constraintName="products_ibfk_1" referencedKeyColumn="//@entites.8/@columns.2"/>
+    <columns name="productName" notNull="true" size="70" type="VARCHAR"/>
+    <columns name="productScale" notNull="true" size="10" type="VARCHAR"/>
+    <columns name="productVendor" notNull="true" size="50" type="VARCHAR"/>
+    <columns name="quantityInStock" notNull="true" type="SMALLINT"/>
+  </entites>
+</mdde:Database_Schema>

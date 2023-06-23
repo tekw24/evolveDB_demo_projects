@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symmetric:SymmetricDifference xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:symmetric="http://www.sidiff.org/difference/symmetric/1.0" uriModelA="platform:/resource/EvolveDB/model/genModel/classicV2.mdde" uriModelB="platform:/resource/EvolveDB/model/classic.mdde" notOverlappings="//@changeSets.0 //@changeSets.1 //@changeSets.2 //@changeSets.3">
+  <changes xsi:type="symmetric:RemoveObject">
+    <obj href="genModel/classicV2.mdde#//@entites.1/@columns.1"/>
+  </changes>
+  <changes xsi:type="symmetric:RemoveReference">
+    <src href="genModel/classicV2.mdde#//@entites.1/@columns.1"/>
+    <tgt href="genModel/classicV2.mdde#//@entites.1"/>
+    <type href="http://www.thm.de/mdde#//Column/table"/>
+  </changes>
+  <changes xsi:type="symmetric:AddObject">
+    <obj href="classic.mdde#//@entites.4/@columns.9"/>
+  </changes>
+  <changes xsi:type="symmetric:AddReference">
+    <src href="classic.mdde#//@entites.4/@columns.9"/>
+    <tgt href="classic.mdde#//@entites.4"/>
+    <type href="http://www.thm.de/mdde#//Column/table"/>
+  </changes>
+  <changes xsi:type="symmetric:AttributeValueChange">
+    <objA href="genModel/classicV2.mdde#//@entites.6/@columns.0"/>
+    <objB href="classic.mdde#//@entites.6/@columns.0"/>
+    <type href="http://www.thm.de/mdde#//Column/type"/>
+  </changes>
+  <changes xsi:type="symmetric:AddReference">
+    <src href="classic.mdde#//@entites.4"/>
+    <tgt href="classic.mdde#//@entites.4/@columns.9"/>
+    <type href="http://www.thm.de/mdde#//Table/columns"/>
+  </changes>
+  <changes xsi:type="symmetric:AttributeValueChange">
+    <objA href="genModel/classicV2.mdde#//@entites.4/@columns.5"/>
+    <objB href="classic.mdde#//@entites.4/@columns.5"/>
+    <type href="http://www.thm.de/mdde#//Column/unique"/>
+  </changes>
+  <changes xsi:type="symmetric:AttributeValueChange">
+    <objA href="genModel/classicV2.mdde#//@entites.4/@columns.5"/>
+    <objB href="classic.mdde#//@entites.4/@columns.5"/>
+    <type href="http://www.thm.de/mdde#//Column/uniqueConstraintName"/>
+  </changes>
+  <changes xsi:type="symmetric:RemoveReference">
+    <src href="genModel/classicV2.mdde#//@entites.1"/>
+    <tgt href="genModel/classicV2.mdde#//@entites.1/@columns.1"/>
+    <type href="http://www.thm.de/mdde#//Table/columns"/>
+  </changes>
+  <changeSets changes="//@changes.6" name="SET_ATTRIBUTE_Column_Unique" priority="1" recognitionRName="RR: SET_ATTRIBUTE_Column_Unique" refinementLevel="2" editRName="SET_ATTRIBUTE_Column_Unique" description="Sets Column Unique" numberOfParams="2"/>
+  <changeSets changes="//@changes.2 //@changes.5 //@changes.3" name="CREATE_Column_IN_Table_(columns)" priority="1" recognitionRName="RR: CREATE_Column_IN_Table_(columns)" refinementLevel="4" editRName="CREATE_Column_IN_Table_(columns)" description="Creates one Column in Table" numberOfParams="3"/>
+  <changeSets changes="//@changes.4" name="SET_ATTRIBUTE_Column_Type" priority="1" recognitionRName="RR: SET_ATTRIBUTE_Column_Type" refinementLevel="2" editRName="SET_ATTRIBUTE_Column_Type" description="Sets Column Type" numberOfParams="2"/>
+  <changeSets changes="//@changes.7" name="SET_ATTRIBUTE_Column_UniqueConstraintName" priority="1" recognitionRName="RR: SET_ATTRIBUTE_Column_UniqueConstraintName" refinementLevel="2" editRName="SET_ATTRIBUTE_Column_UniqueConstraintName" description="Sets Column UniqueConstraintName" numberOfParams="2"/>
+  <changeSets changes="//@changes.0 //@changes.8 //@changes.1" name="DELETE_Column_IN_Table_(columns)" priority="1" recognitionRName="RR: DELETE_Column_IN_Table_(columns)" refinementLevel="4" editRName="DELETE_Column_IN_Table_(columns)" subsets="//@unusedChangeSets.0" description="Deletes one Column in Table" numberOfParams="2"/>
+  <unusedChangeSets changes="//@changes.0" name="DELETE_NamedElement" priority="1" recognitionRName="RR: DELETE_NamedElement" refinementLevel="1" editRName="DELETE_NamedElement" supersets="//@changeSets.4" description="Deletes one NamedElement" numberOfParams="1"/>
+  <matching uriA="platform:/resource/EvolveDB/model/genModel/classicV2.mdde" uriB="platform:/resource/EvolveDB/model/classic.mdde">
+    <correspondences containmentCorrespondences="//@matching/@correspondences.1 //@matching/@correspondences.11 //@matching/@correspondences.16 //@matching/@correspondences.21 //@matching/@correspondences.29 //@matching/@correspondences.39 //@matching/@correspondences.46 //@matching/@correspondences.53 //@matching/@correspondences.67 //@matching/@correspondences.73">
+      <matchedA href="genModel/classicV2.mdde#/"/>
+      <matchedB href="classic.mdde#/"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.2 //@matching/@correspondences.3 //@matching/@correspondences.4 //@matching/@correspondences.5 //@matching/@correspondences.6 //@matching/@correspondences.7 //@matching/@correspondences.8 //@matching/@correspondences.9 //@matching/@correspondences.10">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9"/>
+      <matchedB href="classic.mdde#//@entites.9"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.4"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.4"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.5"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.5"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.6"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.6"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.7"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.7"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.8"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.8"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.1">
+      <matchedA href="genModel/classicV2.mdde#//@entites.9/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.9/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.12 //@matching/@correspondences.13 //@matching/@correspondences.14 //@matching/@correspondences.15">
+      <matchedA href="genModel/classicV2.mdde#//@entites.8"/>
+      <matchedB href="classic.mdde#//@entites.8"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.11">
+      <matchedA href="genModel/classicV2.mdde#//@entites.8/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.8/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.11">
+      <matchedA href="genModel/classicV2.mdde#//@entites.8/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.8/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.11">
+      <matchedA href="genModel/classicV2.mdde#//@entites.8/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.8/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.11">
+      <matchedA href="genModel/classicV2.mdde#//@entites.8/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.8/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.17 //@matching/@correspondences.18 //@matching/@correspondences.19 //@matching/@correspondences.20">
+      <matchedA href="genModel/classicV2.mdde#//@entites.7"/>
+      <matchedB href="classic.mdde#//@entites.7"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.16">
+      <matchedA href="genModel/classicV2.mdde#//@entites.7/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.7/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.16">
+      <matchedA href="genModel/classicV2.mdde#//@entites.7/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.7/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.16">
+      <matchedA href="genModel/classicV2.mdde#//@entites.7/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.7/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.16">
+      <matchedA href="genModel/classicV2.mdde#//@entites.7/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.7/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.22 //@matching/@correspondences.23 //@matching/@correspondences.24 //@matching/@correspondences.25 //@matching/@correspondences.26 //@matching/@correspondences.27 //@matching/@correspondences.28">
+      <matchedA href="genModel/classicV2.mdde#//@entites.6"/>
+      <matchedB href="classic.mdde#//@entites.6"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.21">
+      <matchedA href="genModel/classicV2.mdde#//@entites.6/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.6/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.21">
+      <matchedA href="genModel/classicV2.mdde#//@entites.6/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.6/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.21">
+      <matchedA href="genModel/classicV2.mdde#//@entites.6/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.6/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.21">
+      <matchedA href="genModel/classicV2.mdde#//@entites.6/@columns.4"/>
+      <matchedB href="classic.mdde#//@entites.6/@columns.4"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.21">
+      <matchedA href="genModel/classicV2.mdde#//@entites.6/@columns.5"/>
+      <matchedB href="classic.mdde#//@entites.6/@columns.5"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.21">
+      <matchedA href="genModel/classicV2.mdde#//@entites.6/@columns.6"/>
+      <matchedB href="classic.mdde#//@entites.6/@columns.6"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.21">
+      <matchedA href="genModel/classicV2.mdde#//@entites.6/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.6/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.30 //@matching/@correspondences.31 //@matching/@correspondences.32 //@matching/@correspondences.33 //@matching/@correspondences.34 //@matching/@correspondences.35 //@matching/@correspondences.36 //@matching/@correspondences.37 //@matching/@correspondences.38">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4"/>
+      <matchedB href="classic.mdde#//@entites.4"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.5"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.5"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.6"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.6"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.7"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.7"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.8"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.8"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.29">
+      <matchedA href="genModel/classicV2.mdde#//@entites.4/@columns.4"/>
+      <matchedB href="classic.mdde#//@entites.4/@columns.4"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.40 //@matching/@correspondences.41 //@matching/@correspondences.42 //@matching/@correspondences.43 //@matching/@correspondences.44 //@matching/@correspondences.45">
+      <matchedA href="genModel/classicV2.mdde#//@entites.3"/>
+      <matchedB href="classic.mdde#//@entites.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.39">
+      <matchedA href="genModel/classicV2.mdde#//@entites.3/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.3/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.39">
+      <matchedA href="genModel/classicV2.mdde#//@entites.3/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.3/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.39">
+      <matchedA href="genModel/classicV2.mdde#//@entites.3/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.3/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.39">
+      <matchedA href="genModel/classicV2.mdde#//@entites.3/@columns.4"/>
+      <matchedB href="classic.mdde#//@entites.3/@columns.4"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.39">
+      <matchedA href="genModel/classicV2.mdde#//@entites.3/@columns.5"/>
+      <matchedB href="classic.mdde#//@entites.3/@columns.5"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.39">
+      <matchedA href="genModel/classicV2.mdde#//@entites.3/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.3/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.47 //@matching/@correspondences.48 //@matching/@correspondences.49 //@matching/@correspondences.50 //@matching/@correspondences.51 //@matching/@correspondences.52">
+      <matchedA href="genModel/classicV2.mdde#//@entites.1"/>
+      <matchedB href="classic.mdde#//@entites.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.46">
+      <matchedA href="genModel/classicV2.mdde#//@entites.1/@columns.6"/>
+      <matchedB href="classic.mdde#//@entites.1/@columns.5"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.46">
+      <matchedA href="genModel/classicV2.mdde#//@entites.1/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.1/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.46">
+      <matchedA href="genModel/classicV2.mdde#//@entites.1/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.1/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.46">
+      <matchedA href="genModel/classicV2.mdde#//@entites.1/@columns.4"/>
+      <matchedB href="classic.mdde#//@entites.1/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.46">
+      <matchedA href="genModel/classicV2.mdde#//@entites.1/@columns.5"/>
+      <matchedB href="classic.mdde#//@entites.1/@columns.4"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.46">
+      <matchedA href="genModel/classicV2.mdde#//@entites.1/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.1/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.54 //@matching/@correspondences.55 //@matching/@correspondences.56 //@matching/@correspondences.57 //@matching/@correspondences.58 //@matching/@correspondences.59 //@matching/@correspondences.60 //@matching/@correspondences.61 //@matching/@correspondences.62 //@matching/@correspondences.63 //@matching/@correspondences.64 //@matching/@correspondences.65 //@matching/@correspondences.66">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0"/>
+      <matchedB href="classic.mdde#//@entites.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.4"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.4"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.5"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.5"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.6"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.6"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.7"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.7"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.8"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.8"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.10"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.10"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.11"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.11"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.12"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.12"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.53">
+      <matchedA href="genModel/classicV2.mdde#//@entites.0/@columns.9"/>
+      <matchedB href="classic.mdde#//@entites.0/@columns.9"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.68 //@matching/@correspondences.69 //@matching/@correspondences.70 //@matching/@correspondences.71 //@matching/@correspondences.72">
+      <matchedA href="genModel/classicV2.mdde#//@entites.5"/>
+      <matchedB href="classic.mdde#//@entites.5"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.67">
+      <matchedA href="genModel/classicV2.mdde#//@entites.5/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.5/@columns.1"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.67">
+      <matchedA href="genModel/classicV2.mdde#//@entites.5/@columns.3"/>
+      <matchedB href="classic.mdde#//@entites.5/@columns.3"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.67">
+      <matchedA href="genModel/classicV2.mdde#//@entites.5/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.5/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.67">
+      <matchedA href="genModel/classicV2.mdde#//@entites.5/@columns.2"/>
+      <matchedB href="classic.mdde#//@entites.5/@columns.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.67">
+      <matchedA href="genModel/classicV2.mdde#//@entites.5/@columns.4"/>
+      <matchedB href="classic.mdde#//@entites.5/@columns.4"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.0" containmentCorrespondences="//@matching/@correspondences.74 //@matching/@correspondences.75">
+      <matchedA href="genModel/classicV2.mdde#//@entites.2"/>
+      <matchedB href="classic.mdde#//@entites.2"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.73">
+      <matchedA href="genModel/classicV2.mdde#//@entites.2/@columns.0"/>
+      <matchedB href="classic.mdde#//@entites.2/@columns.0"/>
+    </correspondences>
+    <correspondences containerCorrespondence="//@matching/@correspondences.73">
+      <matchedA href="genModel/classicV2.mdde#//@entites.2/@columns.1"/>
+      <matchedB href="classic.mdde#//@entites.2/@columns.1"/>
+    </correspondences>
+    <unmatchedA href="genModel/classicV2.mdde#//@entites.1/@columns.1"/>
+    <unmatchedB href="classic.mdde#//@entites.4/@columns.9"/>
+  </matching>
+</symmetric:SymmetricDifference>

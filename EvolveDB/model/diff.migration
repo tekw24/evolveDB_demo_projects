@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<de.thm.mdde:Migration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.thm.mdde="http://www.thm.de/migration" uriSymetricDifferenceModel="file:/C:/Users/Torben/Documents/PromotionRelease/workspace/EvolveDB/model/diff.symmetric">
+  <SymmetricDifference href="diff.symmetric#/"/>
+  <schemaModificationOperators xsi:type="de.thm.mdde:PartiallyResolvable" description="Sets Column Unique" displayName="SET_COLUMN_UNIQUE" resolveOptions="Specify condition manually">
+    <semanticChangeSets href="diff.symmetric#//@changeSets.0"/>
+  </schemaModificationOperators>
+  <schemaModificationOperators xsi:type="de.thm.mdde:ResolvableOperator" description="Creates one Column in Table" displayName="CREATE_COLUMN">
+    <semanticChangeSets href="diff.symmetric#//@changeSets.1"/>
+  </schemaModificationOperators>
+  <schemaModificationOperators xsi:type="de.thm.mdde:PartiallyResolvable" description="Sets Column Type" displayName="SET_COLUMN_TYPE">
+    <semanticChangeSets href="diff.symmetric#//@changeSets.2"/>
+  </schemaModificationOperators>
+  <schemaModificationOperators xsi:type="de.thm.mdde:PartiallyResolvable" description="Deletes one Column in Table">
+    <semanticChangeSets href="diff.symmetric#//@changeSets.4"/>
+  </schemaModificationOperators>
+</de.thm.mdde:Migration>
